@@ -10,7 +10,7 @@
 <ul>
   <li *ngIf="items.length === 0">La lista esta vacia</li>
   <li *ngFor="let name of items, index as i">
-    {{name}}{{i}}
+    {{name}} {{i}}
     <button (click)="deleteItem(i)">borrar</button>
   </li>
 </ul>

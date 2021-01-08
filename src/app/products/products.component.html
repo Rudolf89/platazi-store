@@ -1,0 +1,7 @@
+<div class="product-grid">
+    <app-product 
+      *ngFor="let productos of productos" 
+      (productClick)="clickProduct($event)" 
+      [producto] = "productos">
+    </app-product>
+  </div>

@@ -1,6 +1,9 @@
 <input type="text" [(ngModel)]="title">
 {{ title }}
 
+<input type="text" [(ngModel)]="power">
+{{power | exponencial }}
+
 <div *ngIf="title === 'verdadero'">
   <p>La condicion se cumple</p>
 </div>

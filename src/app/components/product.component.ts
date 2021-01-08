@@ -1,5 +1,5 @@
 import { from } from 'rxjs';
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../product.model';
 
 @Component({
@@ -8,12 +8,11 @@ import { Product } from '../product.model';
 })
 export class ProductComponent {
 
-    producto: Product = {
-        id: '1',
-        image: 'assets/images/camiseta.png',
-        title: 'Camiseta',
-        price: 80000,
-        description: 'bla bla bla bla bla'
-    };
+    @Input() producto: Product;
+    @Output() productClick: EventEmitter<any> = new EventEmitter();
 
+    addCart() {
+        console.log('añadir al carrito');
+        this.productClick.emit(this.producto.id);
+    }
 }

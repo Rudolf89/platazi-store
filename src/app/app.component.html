@@ -1,6 +1,6 @@
 <input type="text" [(ngModel)]="title">
 {{ title }}
-<app-product></app-product>
+
 <div *ngIf="title === 'verdadero'">
   <p>La condicion se cumple</p>
 </div>
@@ -11,8 +11,6 @@
   <p *ngSwitchCase="'caso3'">La condicion 3 se cumple</p>
   <p *ngSwitchDefault>No hay match</p>
 </div>
-
-<app-product></app-product>
 
 <button (click)="addItem()">Add item</button>
 
@@ -25,7 +23,5 @@
 </ul>
 
 <div *ngFor="let productos of productos">
-  {{productos.title}}
-  <img [src]="productos.image" alt="" height="500px">
-  {{productos.price}}
+  <app-product (productClick)="clickProduct($event)" [producto] = "productos"></app-product>
 </div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Product} from './product.model'
+import { Product} from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { Product} from './product.model'
 export class AppComponent {
   title = 'platzi-store';
 
-  items = ['Rodolfo','Luis','Angel','Nicolas','Miguel'];
+  items = ['Rodolfo', 'Luis', 'Angel', 'Nicolas', 'Miguel'];
 
   productos: Product[] = [{
     id: '1',
@@ -60,7 +60,7 @@ export class AppComponent {
     this.items.push('nuevo item');
   }
 
-  deleteItem(index:number){
+  deleteItem(index: number) {
     this.items.splice(index, 1);
   }
 }

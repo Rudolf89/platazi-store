@@ -8,13 +8,15 @@ import { ProductComponent } from './components/product.component';
 import { from } from 'rxjs';
 import { CartComponent } from './cart/cart.component';
 import { ExponencialPipe } from './exponencial.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     CartComponent,
-    ExponencialPipe
+    ExponencialPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { from } from 'rxjs';
-import { CartComponent } from './cart/cart.component';
+
 
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
@@ -23,7 +23,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     ProductComponent,
-    CartComponent,
     ProductsComponent,
     ContactComponent,
     DemoComponent,

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { ExponencialPipe } from './pipes/exponential/exponencial.pipe';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
@@ -13,8 +14,15 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     FooterComponent
   ],
+  exports: [
+    ExponencialPipe,
+    HighlightDirective,
+    HeaderComponent,
+    FooterComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SharedModule { }

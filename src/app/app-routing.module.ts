@@ -3,7 +3,6 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 
 import { DemoComponent } from './demo/demo.component';
-import { ProductDetailComponent } from './product/component/product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
 
 import { AdminGuard } from './admin.guard';
@@ -27,20 +26,17 @@ const routes: Routes = [
         loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
       },
       {
-        path: 'product/:id',
-        component: ProductDetailComponent
+        path: 'contact',
+        canActivate: [AdminGuard],
+        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },
       {
-        path: 'contact',
-        //canActivate: [AdminGuard],
-        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
-      }
+        path: 'demo',
+        component: DemoComponent
+      },
     ]
   },
-  {
-    path: 'demo',
-    component: DemoComponent
-  },
+
   {
     path: '**',
     loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)

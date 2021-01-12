@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { ExponencialPipe } from './pipes/exponential/exponencial.pipe';
 import { HighlightDirective } from './directives/highlight/highlight.directive';

@@ -17,6 +17,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MatStepperModule } from '@angular/material/stepper';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatSortModule,
     MatSidenavModule,
     MatListModule,
-    LayoutModule
+    LayoutModule,
+    MatStepperModule
   ],
   exports: [
     MatButtonModule,
@@ -56,7 +58,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatSortModule,
     MatSidenavModule,
     MatListModule,
-    LayoutModule
+    LayoutModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }

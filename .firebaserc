@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "platzi-store-76d32": {
+      "hosting": {
+        "platzi-store": [
+          "platzi-store-76d32"
+        ]
+      }
+    }
+  }
+}

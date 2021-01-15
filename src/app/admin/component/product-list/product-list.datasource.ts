@@ -1,5 +1,5 @@
 import { DataSource } from '@angular/cdk/table';
-import { Product } from '../../../product.model';
+import { Product } from '../../../core/model/product.model';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';

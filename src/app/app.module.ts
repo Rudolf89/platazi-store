@@ -5,7 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { from } from 'rxjs';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { DemoComponent } from './demo/demo.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -26,7 +29,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SharedModule,
     CoreModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

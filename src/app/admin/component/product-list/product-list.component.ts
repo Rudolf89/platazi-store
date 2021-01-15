@@ -26,4 +26,11 @@ export class ProductListComponent implements OnInit {
       this.productos = productos;
     });
   }
+
+  deleteProduct(id){
+    this.productsService.deleteProduct(id)
+    .subscribe(rta => {
+      this.fechtProducts();
+    });
+  }
 }
